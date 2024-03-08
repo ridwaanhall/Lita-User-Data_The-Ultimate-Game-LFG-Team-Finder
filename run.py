@@ -104,7 +104,6 @@ if __name__ == "__main__":
     player_received_rank_order = "player/received/rank/order?"
     moment_user_list = "moment/user/list?"
     
-    
     player_inskill += "&".join([f"{key}={value}" for key, value in params_player_inskill.items()])
     player_detail   = player_detail + "no=" + str(no)
     player_skill_comment += "&".join([f"{key}={value}" for key, value in params_player_skill_comment.items()])
@@ -114,7 +113,7 @@ if __name__ == "__main__":
     player_received_rank_order = player_received_rank_order + "id=" + str(id)
     moment_user_list += "&".join([f"{key}={value}" for key, value in params_moment_user_list.items()])
     
-    data_fetcher = DataFetcher(moment_user_list)
+    data_fetcher = DataFetcher(skill)
     
     data, status_code = data_fetcher.fetch_data()
 
