@@ -13,8 +13,9 @@ class PlayerInSkill:
         page: 
             1 to end
         positionIds: 
-            1 = Tank, 2 = Assasin, 3 = Marksman, 4 = Fighter, 5 = Mage, 6 = Support, 
-            7 = Midlaner, 8 = All Role , 314 = Roamer
+            Mobile Legends [1 = Tank, 2 = Assasin, 3 = Marksman, 4 = Fighter, 5 = Mage, 6 = Support, 
+            7 = Midlaner, 8 = All Role , 314 = Roamer],
+            
         rows:
             1 to 50
         skillId: 
@@ -28,15 +29,15 @@ class PlayerInSkill:
             auditTime = Recenly Joined, None = Recomended, avgStar = Highest Rating,
             price = Price
         '''
-        self.gender = 2
-        self.levelIds = ""
-        self.newBie = 0
-        self.order = "desc"
-        self.page = 1
+        self.gender      = 2
+        self.levelIds    = ""
+        self.newBie      = 0
+        self.order       = "desc"
+        self.page        = 1
         self.positionIds = ""
-        self.rows = 50
-        self.skillId = 1
-        self.sort = "auditTime"
+        self.rows        = 50
+        self.skillId     = 1
+        self.sort        = "auditTime"
 
     def player_inskill_func(self):
         '''
