@@ -1,6 +1,6 @@
 from FetchURL.fetch_data import DataFetcher
 from FetchURL.HandleResponse import HandleResponsePlayerInskill
-from Controller.LitaController import PlayerInSkill, PlayerDetail, PlayerSkillComment, PlayerReceived, MomentUserList, Skills
+from Controller.Lita import PlayerInSkill, PlayerDetail, PlayerSkillComment, PlayerReceived, MomentUserList, Skills
 
 '''
 no = 18682745
