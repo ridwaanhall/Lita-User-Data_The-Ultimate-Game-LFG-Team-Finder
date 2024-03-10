@@ -39,14 +39,14 @@ if __name__ == "__main__":
             print(f"Data not available for page {page}, stopping...")
             break
 
-        folder_name = 'LitaData/Json'
+        folder_name = f'LitaData/Json/{skillId}/{gender}'
         os.makedirs(folder_name, exist_ok=True)
 
         current_date = datetime.now().strftime('%Y%m%d%H%M%S')
 
         page_number = f"{page:04}"
 
-        filename = f"{page_number}_{gender}_{skillId}_{current_date}.json"
+        filename = f"{page_number}_{current_date}.json"
         
         file_path = os.path.join(folder_name, filename)
 
