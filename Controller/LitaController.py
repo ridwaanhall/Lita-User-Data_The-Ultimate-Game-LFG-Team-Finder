@@ -2,7 +2,7 @@ class PlayerInSkill:
     '''
     List of Players in Skill shorted by Audit Time
     '''
-    def __init__(self, gender, page, skillId):
+    def __init__(self, gender, skillId, page, rows):
         '''
         List of Players in Skill shorted by Audit Time
         gender: 
@@ -16,15 +16,15 @@ class PlayerInSkill:
             89 = Point Blank, 60 = CS2, 102 =  Black Desert Mobile, 103 = Sky : Children of the light, 
             109 = Supersus, 113 = Let's Get Rich, 122 = Teman Nyanyi
         '''
-        self.gender      = gender
-        self.levelIds    = ""
-        self.newBie      = 0
-        self.order       = "desc"
-        self.page        = page
+        self.gender = gender
+        self.skillId = skillId
+        self.page = page
+        self.levelIds = ""
+        self.newBie = 0
+        self.order = "desc"
         self.positionIds = ""
-        self.rows        = 50
-        self.skillId     = skillId
-        self.sort        = "auditTime"
+        self.rows = rows
+        self.sort = "auditTime"
 
     def player_inskill_func(self):
         '''
@@ -73,13 +73,13 @@ class PlayerSkillComment:
     '''
     player skill comment
     '''
-    def __init__(self, skillId, userId):
+    def __init__(self, skillId, userId, page):
         '''
         player skill comment by SkillId and userId
         '''
         self.skillId = skillId
         self.userId = userId
-        self.page = 1
+        self.page = page
         self.rows = 50
         
     def player_skill_comment_func(self):
