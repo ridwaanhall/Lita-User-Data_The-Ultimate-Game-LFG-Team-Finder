@@ -1,12 +1,9 @@
 from FetchURL.fetch_data import DataFetcher
-from Controller.player_inskill import PlayerInSkill
-from Controller.player_detail import PlayerDetail
-from Controller.player_skill_comment import PlayerSkillComment
-from Controller.player_received import PlayerReceived
-from Controller.moment_user_list import MomentUserList
+
+from Controller.PlayerController import PlayerInSkill, PlayerDetail, PlayerSkillComment, PlayerReceived, MomentUserList
 
 if __name__ == "__main__":
-    player_inskill = PlayerInSkill().player_inskill_func()
+    player_inskill = PlayerInSkill(2, 1, 1).player_inskill_func()
     player_detail = PlayerDetail(18682745).player_detail_func()
     player_skill_comment = PlayerSkillComment(1, 2190186).player_skill_comment_func()
     
@@ -17,4 +14,4 @@ if __name__ == "__main__":
     data_fetcher = DataFetcher(moment_user_list)
     data, status_code = data_fetcher.fetch_data()
 
-    print(data)
+    print(status_code)
