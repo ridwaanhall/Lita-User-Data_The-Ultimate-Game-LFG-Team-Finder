@@ -46,7 +46,8 @@ class PlayerInSkill:
         player_inskill += "&".join([f"{key}={value}" for key, value in params_player_inskill.items()])
         
         return player_inskill
-    
+
+
 class PlayerDetail:
     '''
     player detail
@@ -66,6 +67,7 @@ class PlayerDetail:
         player_detail += "&".join([f"{key}={value}" for key, value in params_player_detail.items()])
         
         return player_detail
+
 
 class PlayerSkillComment:
     '''
@@ -96,6 +98,7 @@ class PlayerSkillComment:
         
         return player_skill_comment
     
+    
 class PlayerReceived:
     '''
     Handles player-related operations such as gifts, ranks, and orders.
@@ -103,6 +106,8 @@ class PlayerReceived:
     def __init__(self, id):
         '''
         Initializes the player with the given id.
+        
+        Handles player-related operations such as gifts, ranks, and orders.
         '''
         self.id = id
         
@@ -140,6 +145,7 @@ class PlayerReceived:
         '''
         return self._construct_url("rank/order")
 
+
 class MomentUserList:
     '''
     moment User List
@@ -165,3 +171,12 @@ class MomentUserList:
         moment_user_list += "&".join([f"{key}={value}" for key, value in params_moment_user_list.items()])
         
         return moment_user_list
+
+
+class Skills:
+    '''
+    Skill List
+    '''
+    def skills_func():
+        skill = "skill/"
+        return skill
