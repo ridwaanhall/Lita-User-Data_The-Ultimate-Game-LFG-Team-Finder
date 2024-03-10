@@ -1,5 +1,9 @@
+import os
+import json
+from datetime import datetime
+
 from FetchURL.fetch_data import DataFetcher
-from FetchURL.HandleResponse import HandleResponsePlayerInskill
+from FetchURL.HandleResponse import HandleResponsePiS
 from Controller.Lita import PlayerInSkill, PlayerDetail, PlayerSkillComment, PlayerReceived, MomentUserList, Skills
 
 '''
@@ -16,16 +20,37 @@ moment_user_list = MomentUserList(id).moment_user_list_func() # moment user list
 if __name__ == "__main__":
     gender = 2
     skillId = 1
-    rows = 99
-    
-    for page in range(1, 2):  # Loop through pages 1 to 10
-        player_inskill = PlayerInSkill(gender, skillId, page, rows).player_inskill_func()  # List player in skill
+    rows = 50
 
-        data_fetcher = DataFetcher(player_inskill)
+    for page in range(1, 447):
+        json_data = PlayerInSkill(gender, skillId, page, rows).player_inskill_func() # list player in skill
+
+        data_fetcher = DataFetcher(json_data)
         data, status_code = data_fetcher.fetch_data()
-
-        handle_response = HandleResponsePlayerInskill()
-        response = handle_response.handle_data_func(data)
-        print(response, status_code)
         
+        handle_response = HandleResponsePiS()
+        response = handle_response.handle_data_func(data)
+        
+        response = json.dumps(response, indent=4)
 
+        response_json = json.loads(response)
+
+        if response_json['status'] != '0':
+            print(f"Data not available for page {page}, stopping...")
+            break
+
+        folder_name = 'LitaData/Json'
+        os.makedirs(folder_name, exist_ok=True)
+
+        current_date = datetime.now().strftime('%Y%m%d%H%M%S')
+
+        page_number = f"{page:04}"
+
+        filename = f"{page_number}_{gender}_{skillId}_{current_date}.json"
+        
+        file_path = os.path.join(folder_name, filename)
+
+        with open(file_path, 'w') as file:
+            file.write(response)
+
+        print(f"Response saved to: {file_path}, Status code: {status_code}")
