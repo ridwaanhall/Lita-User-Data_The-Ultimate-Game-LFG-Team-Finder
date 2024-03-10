@@ -6,7 +6,7 @@ from Controller.player_received import PlayerReceived
 
 if __name__ == "__main__":
     player_inskill = PlayerInSkill().player_inskill_func()
-    player_detail  = PlayerDetail(18682745).player_detail_func()
+    player_detail = PlayerDetail(18682745).player_detail_func()
     player_skill_comment = PlayerSkillComment(1, 2190186).player_skill_comment_func()
     
     player_received = PlayerReceived(11151425).player_received_rank_total_func()

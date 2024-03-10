@@ -1,61 +1,43 @@
 class PlayerReceived:
     '''
-    player received
+    Handles player-related operations such as gifts, ranks, and orders.
     '''
     def __init__(self, id):
         '''
-        player received by id
+        Initializes the player with the given id.
         '''
         self.id = id
         
-    def player_received_gift_func(self):
+    def _construct_url(self, endpoint):
         '''
-        player received gift
+        Constructs a URL with parameters for the given endpoint.
         '''
-        params_player_received_gift = {
+        params = {
             "id": self.id
         }
-        
-        player_received_gift = "player/received/gift?"
-        player_received_gift += "&".join([f"{key}={value}" for key, value in params_player_received_gift.items()])
-        
-        return player_received_gift
+        url = f"player/received/{endpoint}?" + "&".join([f"{key}={value}" for key, value in params.items()])
+        return url
+    
+    def player_received_gift_func(self):
+        '''
+        Returns the URL for player's received gifts.
+        '''
+        return self._construct_url("gift")
     
     def player_received_rank_total_func(self):
         '''
-        player received rank total
+        Returns the URL for player's received total rank.
         '''
-        params_player_received_rank_total = {
-            "id": self.id
-        }
-        
-        player_received_rank_total = "player/received/rank/total?"
-        player_received_rank_total += "&".join([f"{key}={value}" for key, value in params_player_received_rank_total.items()])
-        
-        return player_received_rank_total
+        return self._construct_url("rank/total")
     
     def player_received_rank_gift_func(self):
         '''
-        player received rank gift
+        Returns the URL for player's received rank gifts.
         '''
-        params_player_received_rank_gift = {
-            "id": self.id
-        }
-        
-        player_received_rank_gift = "player/received/rank/gift?"
-        player_received_rank_gift += "&".join([f"{key}={value}" for key, value in params_player_received_rank_gift.items()])
-        
-        return player_received_rank_gift
+        return self._construct_url("rank/gift")
     
     def player_received_rank_order_func(self):
         '''
-        player received rank order
+        Returns the URL for player's received rank orders.
         '''
-        params_player_received_rank_order = {
-            "id": self.id
-        }
-        
-        player_received_rank_order = "player/received/rank/order?"
-        player_received_rank_order += "&".join([f"{key}={value}" for key, value in params_player_received_rank_order.items()])
-        
-        return player_received_rank_order
+        return self._construct_url("rank/order")
