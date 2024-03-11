@@ -1,0 +1,59 @@
+{
+    "status": "0",
+    "msg": "",
+    "data": {
+        "experimentMatched": false,
+        "hasUselessMsg": false,
+        "batchNo": "0",
+        "page": "0",
+        "rows": [
+            {
+                "id": "503312",
+                "no": "1639096",
+                "nick": "Luma",
+                "avatarUrl": "https://data.lita.cool/user/503312/album/photo_20210915_173903_682_R44693.png?t=1631698743682",
+                "gender": "2",
+                "intro": "M\u00ecnh ch\u01a1i game c\u00f9ng nhau \u0111i! V\u01b0\u01a1ng qu\u1ed1c t\u1ea5u h\u00e0i c\u1ee7a toai l\u00e0 th\u1eeba :V\nIb m\u00ecnh tr\u01b0\u1edbc khi rent nh\u00e9!!!",
+                "verifyType": "0",
+                "verifyDescrib": "",
+                "playerQuality": "1",
+                "isActive": false,
+                "deleted": false,
+                "imUid": "CHIqN21rRoOePn_Mwdx4uw",
+                "kolChatStatus": "disabled",
+                "isWool": false,
+                "hasLwDiscount": false,
+                "skillId": "39",
+                "skillName": "Valorant",
+                "skillBrickIcon": "https://data.lita.cool/static/skill/skill_39_brick.png",
+                "skillBrickMini": "https://data.lita.cool/static/skill/skill_39_brick_mini.png",
+                "skillPcIconUrl": "https://data.lita.cool/mgr/skill/202310081623/vi_valorant_pc-icon.jpeg?width=253&height=320",
+                "skillPcImageUrl": "https://data.lita.cool/mgr/skill/202210261804/20221026180441.png",
+                "skillMiniIconUrl": "https://data.lita.cool/static/skill/mini_icon/valorant.png",
+                "skillLevelId": "263",
+                "skillLevelName": "Gold",
+                "skillIntro": "\"Ch\u01a1i \u0111\u01b0\u1ee3c c\u00e1c v\u1ecb tr\u00ed, \u0111\u1eb7c bi\u1ec7t l\u00e0 sage\"",
+                "skillPosition": "Sentinels,Controllers,Duelists",
+                "skillAudioUrl": "https://data.lita.cool/user8/skill/audio_1.mp3?t=1609118695552",
+                "skillAudioSeconds": "7",
+                "skillPrice": "300.00",
+                "skillPriceName": "30 ph\u00fat",
+                "skillOrderCount": "22",
+                "skillAvgStar": "5.00",
+                "skillTags": "",
+                "skillType": "1",
+                "skillLevelImages": [],
+                "onlineInfo": {
+                    "userId": "503312",
+                    "roomId": "0",
+                    "roomName": ""
+                },
+                "thirdMedias": [],
+                "preferredSkills": [],
+                "levelAuth": false,
+                "guaranteedWin": false,
+                "skillTagList": []
+            }
+        ]
+    }
+}
